@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "64756640367",
+    "firebase_url": "https://flutter-firebase-mlkit.firebaseio.com",
+    "project_id": "flutter-firebase-mlkit",
+    "storage_bucket": "flutter-firebase-mlkit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64756640367:android:04c07ba69ab1289a777b9a",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase_machine_learning_kit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64756640367-dev5tuoeiion76j6ie4ea2it454n31mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqafH0D_zSumcfAyq819td_QQ0zoEaAMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64756640367-dev5tuoeiion76j6ie4ea2it454n31mg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
