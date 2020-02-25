@@ -3,9 +3,9 @@ import 'dart:ui' as ui;
 
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_machine_learning_kit/module/common/facePainterProvider.dart';
 import 'package:flutter_firebase_machine_learning_kit/module/common/firebaseKitProvider.dart';
 import 'package:flutter_firebase_machine_learning_kit/module/common/imagePickerProvider.dart';
+import 'package:flutter_firebase_machine_learning_kit/ui/facePainter.dart';
 
 class FacePage extends StatefulWidget {
   @override
@@ -70,7 +70,7 @@ class _FacePageState extends State<FacePage> {
                       width: _image.width.toDouble(),
                       height: _image.height.toDouble(),
                       child: CustomPaint(
-                        painter: FacePainterProvider(_image, _faces),
+                        painter: FacePainter(_image, _faces),
                       ),
                     ),
                   ),

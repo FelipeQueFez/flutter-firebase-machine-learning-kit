@@ -2,12 +2,12 @@ import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 
-class FacePainterProvider extends CustomPainter {
+class FacePainter extends CustomPainter {
   final ui.Image image;
   final List<Face> faces;
   final List<Rect> rects = [];
 
-  FacePainterProvider(this.image, this.faces) {
+  FacePainter(this.image, this.faces) {
     for (var i = 0; i < faces.length; i++) {
       rects.add(faces[i].boundingBox);
     }
@@ -27,7 +27,7 @@ class FacePainterProvider extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(FacePainterProvider oldDelegate) {
+  bool shouldRepaint(FacePainter oldDelegate) {
     return image != oldDelegate.image || faces != oldDelegate.faces;
   }
 }
