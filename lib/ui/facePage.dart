@@ -28,6 +28,14 @@ class _FacePageState extends State<FacePage> {
     FirebaseKitProvider firebaseKitProvider = new FirebaseKitProvider();
 
     var imageFile = await imagePickerProvider.getImage();
+    if (imageFile == null) {
+      setState(() {
+        isLoading = false;
+      });
+
+      return;
+    }
+
     var faces = await firebaseKitProvider.getFacesAsync(imageFile);
 
     if (mounted) {
