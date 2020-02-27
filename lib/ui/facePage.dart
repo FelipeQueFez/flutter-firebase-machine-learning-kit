@@ -3,8 +3,8 @@ import 'dart:ui' as ui;
 
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_machine_learning_kit/module/common/firebaseKitProvider.dart';
-import 'package:flutter_firebase_machine_learning_kit/module/common/imagePickerProvider.dart';
+import 'package:flutter_firebase_machine_learning_kit/module/firebaseKitProvider.dart';
+import 'package:flutter_firebase_machine_learning_kit/module/imagePickerProvider.dart';
 import 'package:flutter_firebase_machine_learning_kit/ui/facePainter.dart';
 
 class FacePage extends StatefulWidget {
