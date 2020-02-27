@@ -19,6 +19,32 @@ class _FacePageState extends State<FacePage> {
 
   bool isLoading = false;
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: isLoading
+          ? Center(child: CircularProgressIndicator())
+          : (_imageFile == null)
+              ? Center(child: Text('Nenhuma imagem selecionada'))
+              : Center(
+                  child: FittedBox(
+                    child: SizedBox(
+                      width: _image.width.toDouble(),
+                      height: _image.height.toDouble(),
+                      child: CustomPaint(
+                        painter: FacePainter(_image, _faces),
+                      ),
+                    ),
+                  ),
+                ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _getImageAndDetectFaces,
+        tooltip: 'Selecionar imagem',
+        child: Icon(Icons.add_a_photo),
+      ),
+    );
+  }
+
   _getImageAndDetectFaces() async {
     setState(() {
       isLoading = true;
@@ -54,32 +80,6 @@ class _FacePageState extends State<FacePage> {
         _image = value;
         isLoading = false;
       }),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: isLoading
-          ? Center(child: CircularProgressIndicator())
-          : (_imageFile == null)
-              ? Center(child: Text('Nenhuma imagem selecionada'))
-              : Center(
-                  child: FittedBox(
-                    child: SizedBox(
-                      width: _image.width.toDouble(),
-                      height: _image.height.toDouble(),
-                      child: CustomPaint(
-                        painter: FacePainter(_image, _faces),
-                      ),
-                    ),
-                  ),
-                ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _getImageAndDetectFaces,
-        tooltip: 'Selecionar imagem',
-        child: Icon(Icons.add_a_photo),
-      ),
     );
   }
 }
